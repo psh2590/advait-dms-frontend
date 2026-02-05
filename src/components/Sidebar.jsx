@@ -12,10 +12,12 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-64 min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white p-6">
+    <div className="w-64 min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col p-6">
+      {/* Logo */}
       <h1 className="text-2xl font-bold mb-8">AdvaitDMS</h1>
 
-      <nav className="flex flex-col gap-3">
+      {/* Menu */}
+      <nav className="flex flex-col gap-3 flex-1">
         {menu.map((item) => (
           <Link
             key={item.path}
@@ -30,10 +32,11 @@ export default function Sidebar() {
           </Link>
         ))}
       </nav>
+
+      {/* Theme Toggle */}
+      <div className="pt-6 border-t border-slate-700">
+        <ThemeToggle />
+      </div>
     </div>
-    {/* Add at bottom of sidebar */}
-   <div className="mt-auto">
-      <ThemeToggle />
-   </div>
   );
 }
