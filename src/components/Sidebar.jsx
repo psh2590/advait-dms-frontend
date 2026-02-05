@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Sidebar() {
   const { pathname } = useLocation();
@@ -30,5 +31,9 @@ export default function Sidebar() {
         ))}
       </nav>
     </div>
+    {/* Add at bottom of sidebar */}
+   <div className="mt-auto">
+      <ThemeToggle />
+   </div>
   );
 }
